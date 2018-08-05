@@ -1,0 +1,15 @@
+
+setreuid.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e0211001 	eor	r1, r1, r1
+   4:	e3a07046 	mov	r7, #70	; 0x46
+   8:	ef000000 	svc	0x00000000
+
+0000000c <_exit>:
+   c:	e0211001 	eor	r1, r1, r1
+  10:	e3a07001 	mov	r7, #1
+  14:	ef000000 	svc	0x00000000

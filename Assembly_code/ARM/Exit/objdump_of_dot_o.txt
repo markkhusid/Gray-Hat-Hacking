@@ -1,0 +1,10 @@
+
+exit.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e0211001 	eor	r1, r1, r1
+   4:	e3a07001 	mov	r7, #1
+   8:	ef000000 	svc	0x00000000

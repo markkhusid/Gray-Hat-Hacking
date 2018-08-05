@@ -1,0 +1,19 @@
+
+write_test:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00010074 <_start>:
+   10074:	e3a00001 	mov	r0, #1
+   10078:	e59f1010 	ldr	r1, [pc, #16]	; 10090 <addr_of_string>
+   1007c:	e3a0200d 	mov	r2, #13
+   10080:	e3a07004 	mov	r7, #4
+   10084:	ef000000 	svc	0x00000000
+
+00010088 <_exit>:
+   10088:	e3a07001 	mov	r7, #1
+   1008c:	ef000000 	svc	0x00000000
+
+00010090 <addr_of_string>:
+   10090:	00020094 	.word	0x00020094

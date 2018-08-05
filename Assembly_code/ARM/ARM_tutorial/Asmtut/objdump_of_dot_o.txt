@@ -1,0 +1,10 @@
+
+asmtut.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a00041 	mov	r0, #65	; 0x41
+   4:	e3a07001 	mov	r7, #1
+   8:	ef000000 	svc	0x00000000
