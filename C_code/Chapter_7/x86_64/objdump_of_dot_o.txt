@@ -1,0 +1,62 @@
+
+port_bind.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 30          	sub    $0x30,%rsp
+   8:	ba 00 00 00 00       	mov    $0x0,%edx
+   d:	be 01 00 00 00       	mov    $0x1,%esi
+  12:	bf 02 00 00 00       	mov    $0x2,%edi
+  17:	e8 00 00 00 00       	callq  1c <main+0x1c>
+  1c:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  1f:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%rbp)
+  26:	66 c7 45 d2 bb bb    	movw   $0xbbbb,-0x2e(%rbp)
+  2c:	66 c7 45 d0 02 00    	movw   $0x2,-0x30(%rbp)
+  32:	48 8d 4d d0          	lea    -0x30(%rbp),%rcx
+  36:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  39:	ba 10 00 00 00       	mov    $0x10,%edx
+  3e:	48 89 ce             	mov    %rcx,%rsi
+  41:	89 c7                	mov    %eax,%edi
+  43:	e8 00 00 00 00       	callq  48 <main+0x48>
+  48:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4b:	be 00 00 00 00       	mov    $0x0,%esi
+  50:	89 c7                	mov    %eax,%edi
+  52:	e8 00 00 00 00       	callq  57 <main+0x57>
+  57:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  5a:	ba 00 00 00 00       	mov    $0x0,%edx
+  5f:	be 00 00 00 00       	mov    $0x0,%esi
+  64:	89 c7                	mov    %eax,%edi
+  66:	e8 00 00 00 00       	callq  6b <main+0x6b>
+  6b:	89 45 f8             	mov    %eax,-0x8(%rbp)
+  6e:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  71:	be 00 00 00 00       	mov    $0x0,%esi
+  76:	89 c7                	mov    %eax,%edi
+  78:	b8 00 00 00 00       	mov    $0x0,%eax
+  7d:	e8 00 00 00 00       	callq  82 <main+0x82>
+  82:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  85:	be 01 00 00 00       	mov    $0x1,%esi
+  8a:	89 c7                	mov    %eax,%edi
+  8c:	b8 00 00 00 00       	mov    $0x0,%eax
+  91:	e8 00 00 00 00       	callq  96 <main+0x96>
+  96:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  99:	be 02 00 00 00       	mov    $0x2,%esi
+  9e:	89 c7                	mov    %eax,%edi
+  a0:	b8 00 00 00 00       	mov    $0x0,%eax
+  a5:	e8 00 00 00 00       	callq  aa <main+0xaa>
+  aa:	48 c7 45 e0 00 00 00 	movq   $0x0,-0x20(%rbp)
+  b1:	00 
+  b2:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  b9:	00 
+  ba:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  be:	48 8d 4d e0          	lea    -0x20(%rbp),%rcx
+  c2:	ba 00 00 00 00       	mov    $0x0,%edx
+  c7:	48 89 ce             	mov    %rcx,%rsi
+  ca:	48 89 c7             	mov    %rax,%rdi
+  cd:	e8 00 00 00 00       	callq  d2 <main+0xd2>
+  d2:	b8 00 00 00 00       	mov    $0x0,%eax
+  d7:	c9                   	leaveq 
+  d8:	c3                   	retq   
