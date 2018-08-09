@@ -1,0 +1,19 @@
+
+shellcode2:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	e92d4800 	push	{fp, lr}
+   10078:	e28db004 	add	fp, sp, #4
+   1007c:	e24dd008 	sub	sp, sp, #8
+   10080:	e30030a4 	movw	r3, #164	; 0xa4
+   10084:	e3403001 	movt	r3, #1
+   10088:	e50b3008 	str	r3, [fp, #-8]
+   1008c:	e51b3008 	ldr	r3, [fp, #-8]
+   10090:	e12fff33 	blx	r3
+   10094:	e3a03000 	mov	r3, #0
+   10098:	e1a00003 	mov	r0, r3
+   1009c:	e24bd004 	sub	sp, fp, #4
+   100a0:	e8bd8800 	pop	{fp, pc}
