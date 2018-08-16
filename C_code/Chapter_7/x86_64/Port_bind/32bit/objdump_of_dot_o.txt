@@ -1,0 +1,73 @@
+
+port_bind.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+   4:	83 e4 f0             	and    $0xfffffff0,%esp
+   7:	ff 71 fc             	pushl  -0x4(%ecx)
+   a:	55                   	push   %ebp
+   b:	89 e5                	mov    %esp,%ebp
+   d:	51                   	push   %ecx
+   e:	83 ec 24             	sub    $0x24,%esp
+  11:	83 ec 04             	sub    $0x4,%esp
+  14:	6a 00                	push   $0x0
+  16:	6a 01                	push   $0x1
+  18:	6a 02                	push   $0x2
+  1a:	e8 fc ff ff ff       	call   1b <main+0x1b>
+  1f:	83 c4 10             	add    $0x10,%esp
+  22:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  25:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+  2c:	66 c7 45 da bb bb    	movw   $0xbbbb,-0x26(%ebp)
+  32:	66 c7 45 d8 02 00    	movw   $0x2,-0x28(%ebp)
+  38:	83 ec 04             	sub    $0x4,%esp
+  3b:	6a 10                	push   $0x10
+  3d:	8d 45 d8             	lea    -0x28(%ebp),%eax
+  40:	50                   	push   %eax
+  41:	ff 75 f4             	pushl  -0xc(%ebp)
+  44:	e8 fc ff ff ff       	call   45 <main+0x45>
+  49:	83 c4 10             	add    $0x10,%esp
+  4c:	83 ec 08             	sub    $0x8,%esp
+  4f:	6a 00                	push   $0x0
+  51:	ff 75 f4             	pushl  -0xc(%ebp)
+  54:	e8 fc ff ff ff       	call   55 <main+0x55>
+  59:	83 c4 10             	add    $0x10,%esp
+  5c:	83 ec 04             	sub    $0x4,%esp
+  5f:	6a 00                	push   $0x0
+  61:	6a 00                	push   $0x0
+  63:	ff 75 f4             	pushl  -0xc(%ebp)
+  66:	e8 fc ff ff ff       	call   67 <main+0x67>
+  6b:	83 c4 10             	add    $0x10,%esp
+  6e:	89 45 f0             	mov    %eax,-0x10(%ebp)
+  71:	83 ec 08             	sub    $0x8,%esp
+  74:	6a 00                	push   $0x0
+  76:	ff 75 f0             	pushl  -0x10(%ebp)
+  79:	e8 fc ff ff ff       	call   7a <main+0x7a>
+  7e:	83 c4 10             	add    $0x10,%esp
+  81:	83 ec 08             	sub    $0x8,%esp
+  84:	6a 01                	push   $0x1
+  86:	ff 75 f0             	pushl  -0x10(%ebp)
+  89:	e8 fc ff ff ff       	call   8a <main+0x8a>
+  8e:	83 c4 10             	add    $0x10,%esp
+  91:	83 ec 08             	sub    $0x8,%esp
+  94:	6a 02                	push   $0x2
+  96:	ff 75 f0             	pushl  -0x10(%ebp)
+  99:	e8 fc ff ff ff       	call   9a <main+0x9a>
+  9e:	83 c4 10             	add    $0x10,%esp
+  a1:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+  a8:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+  af:	8b 45 e8             	mov    -0x18(%ebp),%eax
+  b2:	83 ec 04             	sub    $0x4,%esp
+  b5:	6a 00                	push   $0x0
+  b7:	8d 55 e8             	lea    -0x18(%ebp),%edx
+  ba:	52                   	push   %edx
+  bb:	50                   	push   %eax
+  bc:	e8 fc ff ff ff       	call   bd <main+0xbd>
+  c1:	83 c4 10             	add    $0x10,%esp
+  c4:	b8 00 00 00 00       	mov    $0x0,%eax
+  c9:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+  cc:	c9                   	leave  
+  cd:	8d 61 fc             	lea    -0x4(%ecx),%esp
+  d0:	c3                   	ret    
