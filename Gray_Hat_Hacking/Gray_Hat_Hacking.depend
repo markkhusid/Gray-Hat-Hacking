@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1535621317 source:/home/mark/Engineering/Programming/GITHUB/Gray-Hat-Hacking/C_code/Chapter_7/x86_64/Encoder/encoder.c
+	<stdio.h>
+	<string.h>
+	<sys/time.h>
+	<stdlib.h>
+	<unistd.h>
+
