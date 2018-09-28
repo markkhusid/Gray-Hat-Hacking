@@ -1,0 +1,7 @@
+You need to change the mode to set superuser id by entering:
+
+$ sudo chmod u+s shellcode
+
+then enter ./shellcode as a normal user to get privilege escalation
+
+

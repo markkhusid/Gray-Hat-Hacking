@@ -1,0 +1,14 @@
+
+setreuid.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	31 c0                	xor    %eax,%eax
+   2:	b0 46                	mov    $0x46,%al
+   4:	31 db                	xor    %ebx,%ebx
+   6:	31 c9                	xor    %ecx,%ecx
+   8:	cd 80                	int    $0x80
+   a:	b0 01                	mov    $0x1,%al
+   c:	cd 80                	int    $0x80

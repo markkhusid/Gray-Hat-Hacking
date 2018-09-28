@@ -1,0 +1,33 @@
+
+get_sp.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <get_sp>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	89 e0                	mov    %esp,%eax
+   5:	90                   	nop
+   6:	5d                   	pop    %ebp
+   7:	c3                   	ret    
+
+00000008 <main>:
+   8:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+   c:	83 e4 f0             	and    $0xfffffff0,%esp
+   f:	ff 71 fc             	pushl  -0x4(%ecx)
+  12:	55                   	push   %ebp
+  13:	89 e5                	mov    %esp,%ebp
+  15:	51                   	push   %ecx
+  16:	83 ec 04             	sub    $0x4,%esp
+  19:	e8 fc ff ff ff       	call   1a <main+0x12>
+  1e:	83 ec 08             	sub    $0x8,%esp
+  21:	50                   	push   %eax
+  22:	68 00 00 00 00       	push   $0x0
+  27:	e8 fc ff ff ff       	call   28 <main+0x20>
+  2c:	83 c4 10             	add    $0x10,%esp
+  2f:	b8 00 00 00 00       	mov    $0x0,%eax
+  34:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+  37:	c9                   	leave  
+  38:	8d 61 fc             	lea    -0x4(%ecx),%esp
+  3b:	c3                   	ret    
