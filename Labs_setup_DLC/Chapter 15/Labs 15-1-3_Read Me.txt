@@ -1,0 +1,37 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *
+*                                                                                                                                *
+* Welcome to Chapter 15! Below you will find the steps required to set up Lab 15-1. This set up will also be used for Labs 15-2  *
+* and 15-3. 															 *                                                                                                        
+*                                                                                                                                *
+**********************************************************************************************************************************
+                                                                      
+1. Download Backtrack 5 R3 VMware Image from:
+
+	http://www.backtrack-linux.org/backtrack/backtrack-5-r3-released/
+
+
+2. Login with user root and pass toor. 
+
+
+3. Configure the database. Log in to Mysql with password "toor" (or whatever password you set) and load the db_schema.sql file from this lab:
+
+   root@bt:~# mysql -u root -p
+   mysql> source /path_to_schema/db_schema.sql
+
+
+Set up the web environment: 
+
+4. Go to your apache web root dir (usually /var/www/) and create a folder name "GH4".
+
+5. Copy the 15 directory from your repository to the GH4 web folder.
+
+6. The final structure should be something like this:
+
+	/var/www/GH4/15/1/
+	/var/www/GH4/15/2/
+	/var/www/GH4/15/3/
+	
+
+                                                            

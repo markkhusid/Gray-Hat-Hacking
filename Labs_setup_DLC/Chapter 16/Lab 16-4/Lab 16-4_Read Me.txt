@@ -1,0 +1,28 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 16! Below you will find the steps required to set up Lab 16-4.                                              *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Install swftools in order to compile Flash files by running the program: 
+
+	swftools-2013-04-09-1007.exe 
+
+  You can get the latest version from: 
+	
+	www.swftools.org
+
+
+2. Add the default installation directory to your PATH environment. Press the Windows Logo key + Break or go to Control Panel -> System and Security-> System and click on "Advanced System Settings".
+
+  Edit the PATH environment by adding the following at the end of the path: 
+
+	C:\Program Files\SWFTools
+
+This will allow you to run the command as3compile from anywhere in the system.
+
+
+3. Copy the provided spray.swf and flash.html files to the /var/www/GH4/16/ directory on Backtrack.
+

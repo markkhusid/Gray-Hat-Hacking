@@ -1,0 +1,83 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *
+*                                                                                                                                *
+* Welcome to Chapter 15! Below you will find the steps required to set up Lab 15-4. 		                                 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+1. Before installing the packages noted below, try to run transforme.php. If and only if you receive the error:
+
+	"Call to undefined function normalizer_normalize()"
+
+   will you need to perform all of the steps below. If you are lucky, you may already have PHP Int support enabled.
+
+
+  For additional information go to: 
+
+	http://freddyduarte.com/2013/08/14/installing-the-icu-libraries-and-the-php-intl-extension-on-a-mac/
+
+  although the steps for Mac are relatively the same for Linux.
+
+
+1.1 Go to your BackTrack VM and switch to root account: su - root.
+
+
+1.2 Install the ICU Library (included in the folder with this file) needed to install php Intl package for Unicode support.
+
+	tar -xvf icu4c-4_8_1-src.tgz
+	cd icu/source
+	./runConfigureICU Linux           <-- Here: If you want to configure it on Mac or other architecture just put the name (e.g. MacOSX) and check runConfigureICU script.
+	make
+	sudo make install
+
+
+1.3 Install pecl:
+
+	apt-get install php5-dev
+	apt-get install php-pear
+
+
+1.4 Install PHP Intl support:
+
+	pecl install intl
+
+   You will get the prompt and you can just hit Enter or input /usr/local.
+
+   Specify where the ICU libraries and headers can be found [DEFAULT] : /usr/local.
+
+
+1.5 Finally, just add the extension to php.ini and restart Apache.
+
+	// Add this to the bottom of your php.ini file
+	extension=intl.so
+
+
+1.6 Restart Apache:
+
+	apache2ctl stop
+	apache2ctl start
+
+
+
+Installing Proxy Fiddler2 and the plugin
+
+2. Download Fiddler2 from:
+
+	http://fiddler2.com/get-fiddler
+
+3. Install Fiddler2 by running fiddler2setup.exe.
+
+4. Download x5s Fiddler2’s extension:
+
+	x5s: http://xss.codeplex.com/releases/view/43170
+
+5. Install x5s by running X5Setup.
+
+   Accept default folder installation since Fiddler will load the plugins from: 
+
+	%USERPROFILE%\Documents\Fiddler2\Scripts\ folder so do not change the destination.
+
+
+

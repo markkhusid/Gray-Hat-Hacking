@@ -1,0 +1,18 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 19! Below you will find the steps required to set up Lab 19-2. The files for download are also needed for	 *
+* Labs 19-3 and 19-4.						           							 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+For Lab 19-2 you will need the following files in order to perform the patch diffing.
+
+
+1. Extract the contents from the accompanying file "MS14-006.7z".
+
+
+Note: You will need these files for Labs 19-3 and 19-4 as well. Additional instructions for downloading relevant tools are provided, as necessary, in the relevant sections within the chapter. 
+

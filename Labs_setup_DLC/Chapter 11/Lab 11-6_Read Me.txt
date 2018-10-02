@@ -1,0 +1,26 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *
+*                                                                                                                                *
+* Welcome to Chapter 11! Below you will find the steps required to set up Lab 11-6.                                              *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: BackTack 2 Instance
+
+
+1. Download the BT2 ISO from:
+
+	http://archive.aircrack-ng.org/backtrack/bt2final.iso
+
+
+2. Build a VM using the ISO as media. IP addresses don't matter, so DHCP is fine.
+
+
+3. After BT2 is up and running, open a root shell and type the following:
+
+	echo 0 > /proc/sys/kernel/randomize_va_space   
+
+
+
+

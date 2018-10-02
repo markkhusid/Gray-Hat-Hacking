@@ -1,0 +1,13 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 16! Below you will find the steps required to set up Lab 16-1.                                              *                                                                                    *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: We will be using BackTrack R5 for the labs in this chapter, but any Linux distro can be used. First just ensure Apache is installed.
+
+
+1. Copy the provided canvas.html file to the Apache web server on Backtrack: /var/www/GH4/16/.
+

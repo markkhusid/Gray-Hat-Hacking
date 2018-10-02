@@ -1,0 +1,31 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 5! Below you will find the steps required to set up Lab 5-2. Before attempting this lab please follow the   *
+* instructions for Lab 5-1.      		               		                                                         *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+1. Download and install Python 2.7 from:
+
+	http://www.python.org/     
+ 
+                                                               
+2. Download and install the latest version of Peach fuzzer from:
+ 
+	http://peachfuzzer.com/ 
+
+   to C:\peach3\.
+
+
+3. Download and install VLC media player from:
+ 
+ 	http://www.videolan.org/vlc/ 
+
+   to C:\VLC. VLC will be used as a sample fuzzing target in this lab.
+
+
+4. Complete Lab 5-1 before beginning this lab.
+

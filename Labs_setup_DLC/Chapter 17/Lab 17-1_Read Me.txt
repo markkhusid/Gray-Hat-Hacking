@@ -1,0 +1,19 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 17! Below you will find the steps required to set up Lab 17-1.                                              *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Please choose and follow one of the two steps, A or B, below:
+
+
+A. Install Microsoft Script Debugger (optional) to debug JavaScript code:
+
+	http://www.microsoft.com/en-us/download/details.aspx?id=22185
+
+
+B. Use the built-in debugger from IE 10:
+
+   Go to IE, Alt+Tools -> F12 Developer options -> Scripts tag -> Set breakpoint at any line and restart page by hitting F5.
