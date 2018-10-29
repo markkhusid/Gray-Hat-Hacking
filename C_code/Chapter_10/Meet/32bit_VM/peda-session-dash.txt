@@ -1,0 +1,4 @@
+break main
+break /home/haxor/Engineering/GITHUB/Gray-Hat-Hacking/C_code/Chapter_10/Meet/32bit_VM/meet.c:9
+disable $bpnum
+

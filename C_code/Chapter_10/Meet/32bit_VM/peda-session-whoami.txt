@@ -1,0 +1,7 @@
+break *greeting+73
+disable $bpnum
+break *greeting+79
+disable $bpnum
+break *greeting+103
+disable $bpnum
+
