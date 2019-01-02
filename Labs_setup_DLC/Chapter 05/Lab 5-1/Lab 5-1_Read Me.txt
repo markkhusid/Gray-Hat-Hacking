@@ -1,0 +1,26 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 5! Below you will find the steps required to set up Lab 5-1. This set up will also be used for Labs 5-2 and *
+* 5-3.                                                                                                                           *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: For all Chapter 5 labs, Windows or Linux operating systems can be used. 
+
+
+1. Download and install Python 2.7 from:
+
+	http://www.python.org/    
+
+                                                                  
+2. Download the latest version of pilfer-archive-new.py script from:
+
+	https://github.com/levle/pilfer-archive 
+
+   and save it to C:\pilfer-archive\.
+
+
+3. Create folder "repo" under c:\pilfer-archive\.
+

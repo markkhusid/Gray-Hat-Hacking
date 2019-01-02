@@ -1,0 +1,156 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *
+*                                                                                                                                *
+* Welcome to Chapter 9! Below you will find the steps required to set up Lab 9-1. This set up will also be used for all of       *
+* labs in this chapter.                                                                                                          *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: Fully-updated Kali Linux install, Windows 7, Ubuntu instance with GNS3, Cisco c3725 Image
+
+
+1. Ensure the virtual machines are configured in this configuration:
+
+Ubuntu Instance:
+	1 Bridged Adapter: DHCP
+	1 Host Only Adapter: DHCP (Private Network)
+
+Windows 7 Instance: 
+	1 Host Only Adapter: 
+		IP: 192.168.100.10
+		Netmask: 255.255.255.0
+		Gateway: 192.168.100.1
+		DNS: 8.8.8.8
+
+Kali Linux Instance:
+	1 Bridged Adapter:
+		IP: 192.168.1.90
+		Netmask: 255.255.255.0
+		Gateway: 192.168.1.1
+
+Network Gateway:
+	IP: 192.168.1.1
+        Netmask: 255.255.255.0		
+		
+For more information on the types of VMWare interfaces and the difference between Bridged, NAT, and Host Only mode, see the RedNecctar description of each type of interface:
+http://rednectar.net/2011/07/20/vmware-interfaces-tutorial/
+
+
+2. Next, to setup the routing environment from the Ubuntu image enter:
+
+	sudo apt-get install gns3
+	sudo gns3 &
+
+
+3. Once GNS3 has started, ensure that the Cisco image is copied over to the device. The image should be named "c3725-adventerprisek9-mz.124-15.T14.bin" or something similar.
+
+Inside GNS3, go to the Edit menu and choose IOS Images and hypervisors.
+
+Choose the image file you put onto the Ubuntu system for the image. It will ask if you want to decompress the image. Choose Yes.
+
+Set the platform to c3700 and ensure the Model says 3725.
+
+Set the Default RAM to 128 Mib.
+
+Choose Save and close the window.
+
+Go to File and choose New Blank Topology.
+
+Drag the Cloud icon in the bottom of the Node Types to the screen.
+
+Drag the Router c3700 to the screen.
+
+Double click the Cloud labeled C1.
+
+When the configuration window pops up, click C1.
+
+Under Linux Ethernet NIO, pull the first drop box down to eth0 and click Add.
+
+Under Linux Ethernet NIO, pull the first drop box down to eth1 and click Add.
+
+Click Apply and then OK.
+
+Click the Add A Link icon that looks like an Ethernet plug on the toolbar.
+
+Choose FastEthernet.
+
+Click on C1 and choose the eth0 option and then drag then click on R1.
+
+Click on C1 and choose the eth1 option and then drag then click on R1.
+
+Press the white X in the red octagon to stop adding links.
+
+Right click on the R1 router and choose Startup Config.
+
+In the text box, paste the following configuration:
+
+! Begin Copying Here
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+hostname ghh-r1
+boot-start-marker
+boot-end-marker
+enable secret 5 $1$E.2N$6HDnuNoWYNF7jfimzBtV4/
+aaa new-model
+aaa authentication login default local
+aaa authorization config-commands
+aaa authorization exec default local 
+aaa session-id common
+memory-size iomem 5
+ip cef
+ip domain name ghh.local
+multilink bundle-name authenticated
+username test password 7 08114D5D1A0E5505164A
+username admin privilege 15 secret 5 $1$m9RP$WMBDl2prhisVK6bQ14Ujs0
+archive
+ log config
+  hidekeys
+ip ssh time-out 60
+ip ssh authentication-retries 5
+interface FastEthernet0/0
+ ip address 192.168.1.250 255.255.255.0
+ duplex auto
+ speed auto
+interface FastEthernet0/1
+ ip address 192.168.100.1 255.255.255.0
+ duplex auto
+ speed auto
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ip default-gateway 192.168.100.1
+ip default-network 192.168.1.0
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 192.168.1.1
+ip http server
+ip http authentication aaa
+no ip http secure-server
+snmp-server community public RO
+snmp-server community secret RW
+route-map priv permit 0
+control-plane
+line con 0
+line aux 0
+line vty 0 4
+ transport input ssh
+end
+! End Copying Here
+
+Right click R1 and choose start.
+
+
+4: Add route to 192.168.100.0 network.
+
+Take your local router (not the GNS3 Router) and add a route for the 192.168.100.0/24 network. The gateway for this network should be the 192.168.1.250 address.
+
+
+5: Verify connectivity from the Windows 7 box.
+
+You should now be able to browse webpages and view the Internet from the Windows 7 system. If this does not work, verify that network adapters are setup properly, the GNS3 Router is started, and that no errors are printed when the device starts.
+
+Note: The 192.168.1.X addresses used in this chapter can be swapped out for other addresses if your local network is not 192.168.1.X. The devices that will need to have addresses updated are the GNS Router and the Kali system.

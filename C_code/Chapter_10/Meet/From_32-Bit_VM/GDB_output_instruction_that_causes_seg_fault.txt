@@ -1,0 +1,10 @@
+[-------------------------------------code-------------------------------------]
+   0x8048903 <main+26>:	add    esp,0x8
+   0x8048906 <main+29>:	mov    eax,DWORD PTR [ebp+0xc]
+   0x8048909 <main+32>:	add    eax,0x8
+=> 0x804890c <main+35>:	mov    edx,DWORD PTR [eax]
+   0x804890e <main+37>:	mov    eax,DWORD PTR [ebp+0xc]
+   0x8048911 <main+40>:	add    eax,0x4
+   0x8048914 <main+43>:	mov    eax,DWORD PTR [eax]
+   0x8048916 <main+45>:	push   edx
+

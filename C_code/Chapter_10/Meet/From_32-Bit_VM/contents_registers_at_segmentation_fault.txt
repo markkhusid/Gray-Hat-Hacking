@@ -1,0 +1,12 @@
+[----------------------------------registers-----------------------------------]
+EAX: 0x41414149 ('IAAA')
+EBX: 0x80481a8 (<_init>:	push   ebx)
+ECX: 0x7ffffe66 
+EDX: 0x80eb4d4 --> 0x0 
+ESI: 0x80ea00c --> 0x8066fc0 (<__strcpy_sse2>:	mov    edx,DWORD PTR [esp+0x4])
+EDI: 0x45 ('E')
+EBP: 0xbfffed00 ('A' <repeats 184 times>)
+ESP: 0xbfffedc8 --> 0x0 
+EIP: 0x804890c (<main+35>:	mov    edx,DWORD PTR [eax])
+EFLAGS: 0x10202 (carry parity adjust zero sign trap INTERRUPT direction overflow)
+

@@ -1,0 +1,17 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 12! Below you will find the steps required to set up Lab 12-2. 						 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+1. Go to:
+
+	http://immunityinc.com/products-immdbg.shtml
+
+   to download the free Immunity Debugger from Immunity Inc. 
+
+
+2. Follow the default installation instructions, allowing Python 2.7 to be installed if necessary.

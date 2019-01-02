@@ -1,0 +1,17 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 5! Below you will find the steps required to set up Lab 5-3. Before attempting this lab please follow the   *
+* instructions for Labs 5-1 and 5-2.      		               		                                                 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Complete Labs 5-1 and 5-2 before starting this lab.
+
+2. From Folder "Lab 5-3," download the file:
+
+	Lab 5-3_rm_fuzz.xml 
+
+
+

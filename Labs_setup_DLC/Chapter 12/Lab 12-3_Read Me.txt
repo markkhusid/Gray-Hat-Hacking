@@ -1,0 +1,24 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 12! Below you will find the steps required to set up Lab 12-3. 						 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+1. Go to:
+
+	http://www.labtam-inc.com/articles/prosshd-1-2.html
+  
+   to download the free trial version of ProSSHD v1.2. Follow the instructions to sign up for the free trial key. 
+
+
+2. Follow the default installation instructions, allowing Python 2.7 to be installed if necessary. Please ensure you are using Windows 7 SP1.
+
+
+3. Go to:
+
+	https://pypi.python.org/packages/source/s/scpclient/scpclient-0.4.tar.gz
+
+   to download the scpclient module for Python. Follow the default installation instructions.

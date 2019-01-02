@@ -1,0 +1,34 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 19! Below you will find the steps required to set up Lab 19-1. 						 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+
+For Lab 19-1 you may wish to download the free version of IDA 5.0 and the appropriate files to get turbodiff up and running. The following instructions will walk you through this process. 
+
+
+1. Go to:
+
+	http://out7.hex-rays.com/files/idafree50.exe 
+
+   to download the free version of IDA 5.0. Follow the simple installation instructions and accept all defaults. 
+
+
+2. Go to the Core Security, Core Labs site to download turbodiff:
+
+	http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=turbodiff
+
+
+3. Go to the section of the page titled “Downloads” and download the latest stable release 1.01b_r2. This will download the file: turbodiff_1.01b_r2_ida_free_5.rar, which you must extract with a tool such as 7zip. 
+
+
+4. Once you extract this file, there are two files you must copy to your IDA Free folder under “Program Files” or “Program Files (x86)” if you are on a 64 bit version of Windows.
+
+   The first file is turbodiff.cfg which must be copied to: C:\Program Files (x86)\IDA Free\cfg\.
+
+   The second file is turbodiff.plw which must be copied to: C:\Program Files (x86)\IDA Free\plugins\.
+
+   Once you have completed these steps, turbodiff should be successfully installed.  

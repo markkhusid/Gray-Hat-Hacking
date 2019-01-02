@@ -1,0 +1,16 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 12! Below you will find the steps required to set up Lab 12-1. 						 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Go to:
+
+	http://www.microsoft.com/express/download/
+
+   to download the free version of Microsoft C/C++ Optimizing Compiler Express 2013 for Windows.
+
+
+2. Follow the default installation instructions. 

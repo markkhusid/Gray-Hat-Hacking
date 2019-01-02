@@ -1,0 +1,35 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 18! Below you will find the steps required to set up Lab 18-1. This set up will also be used for all labs   *
+* in this chapter.	                                                                                                         *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: To run the Chapter 18 labs you must begin with a Kali Linux install that has been fully-updated. Once the system has booted, and you have logged into the system and started a shell, there are a few packages that need to be installed.
+
+
+1. The following are the IP addresses used in the chapter:
+
+	Default Gateway: 192.168.192.2
+	Kali: 192.168.192.10
+	Windows 7: 192.168.192.20
+
+
+2. While these IP addresses may not match your local network, they are being used for identification purposes only. Swap out the IP address for each of your machines with these values to perform these tasks on your local network.
+
+
+3. On Kali Linux, the ant, sqlite3-devel, and ruby-dev modules are required. To install these you will need to type the following at a command prompt:
+
+	# apt-get install ant libsqlite3-dev ruby-dev
+
+
+4. You will be promoted throughout the chapter to download additional code.
+
+
+
+
+
+
+

